@@ -1,13 +1,13 @@
 <a>
     <picture>
-        <img alt="papermind" src=""/>
+        <img alt="papermind" src="https://github.com/PrasathRavichandran/paper-mind/blob/main/public/logo.png"/>
     </picture>
 </a>
 
 <div align="center">
     <h1>Papermind</h1>
-    <h3>Upload, chat, and extract insights from your PDFs effortlessly. Let AI turn your documents into conversations!</h3>
-    <a href="">
+    <h3>Upload, chat, and extract insights from your PDFs effortlessly.<br/> Let AI turn your documents into conversations!</h3>
+    <a href="https://github.com/PrasathRavichandran/paper-mind/blob/main/LICENSE">
         <img alt="MIT License" src="https://img.shields.io/badge/License-MIT-green.svg"/>
     </a>
 </div>
