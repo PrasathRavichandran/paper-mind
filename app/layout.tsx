@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
+import { cn } from "@/lib/utils";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Papermind",
-  description: "Upload, chat, and extract insights from your PDFs effortlessly. Let AI turn your documents into conversations!",
+  description:
+    "Upload, chat, and extract insights from your PDFs effortlessly. Let AI turn your documents into conversations!",
 };
 
 export default function RootLayout({
@@ -23,11 +26,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={cn(
+          `${geistSans.variable} ${geistMono.variable} antialiased`,
+          "font-sans min-h-screen"
+        )}
       >
-        {children}
+        <ThemeProvider
+          attribute={"class"}
+          defaultTheme={"light"}
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
