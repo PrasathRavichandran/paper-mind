@@ -5,6 +5,21 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  const steps: { heading: string; description: string }[] = [
+    {
+      heading: "Sign up for an account",
+      description: "Starting out with a free plan. Try out today.",
+    },
+    {
+      heading: "Upload your PDF file",
+      description: `We'll process your file and make it ready for you to chat
+                with.`,
+    },
+    {
+      heading: "Start asking questions",
+      description: `It's that simple. It really takes less than a minute.`,
+    },
+  ];
   return (
     <MaxWidthWrapper
       className={"flex flex-col items-center justify-center overflow-hidden"}
@@ -50,40 +65,17 @@ export default function Home() {
         </div>
 
         <ol className="my-8 space-y-4 pt-8 md:flex md:space-x-12 md:space-y-0">
-          <li className="md:flex-1">
-            <div className="flex flex-col space-y-2 py-2 pl-4 md:pb-0 md:pl-0 md:pt-4">
-              <span className="text-sm font-medium text-mint-500">Step 1</span>
-              <span className="text-xl font-semibold">
-                Sign up for an account
-              </span>
-              <span className="mt-2 text-zinc-700">
-                Starting out with a free plan. Try out today.
-              </span>
-            </div>
-          </li>
-          <li className="md:flex-1">
-            <div className="flex flex-col space-y-2 py-2 pl-4 md:pb-0 md:pl-0 md:pt-4">
-              <span className="text-sm font-medium text-mint-500">Step 2</span>
-              <span className="text-xl font-semibold">
-                Upload your PDF file
-              </span>
-              <span className="mt-2 text-zinc-700">
-                We&apos;ll process your file and make it ready for you to chat
-                with.
-              </span>
-            </div>
-          </li>
-          <li className="md:flex-1">
-            <div className="flex flex-col space-y-2 py-2 pl-4 md:pb-0 md:pl-0 md:pt-4">
-              <span className="text-sm font-medium text-mint-500">Step 3</span>
-              <span className="text-xl font-semibold">
-                Start asking questions
-              </span>
-              <span className="mt-2 text-zinc-700">
-                It&apos;s that simple. It really takes less than a minute.
-              </span>
-            </div>
-          </li>
+          {steps.map(({ heading, description }, index) => (
+            <li className="md:flex-1" key={index}>
+              <div className="flex flex-col space-y-2 py-2 pl-4 md:pb-0 md:pl-0 md:pt-4">
+                <span className="text-sm font-medium text-mint-500">
+                  Step {index + 1}
+                </span>
+                <span className="text-xl font-semibold">{heading}</span>
+                <span className="mt-2 text-zinc-700">{description}</span>
+              </div>
+            </li>
+          ))}
         </ol>
       </div>
     </MaxWidthWrapper>
