@@ -4,6 +4,10 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { Dancing_Script } from "next/font/google";
+
+const dancingScript = Dancing_Script();
+
 export default function Home() {
   const steps: { heading: string; description: string }[] = [
     {
@@ -77,6 +81,19 @@ export default function Home() {
             </li>
           ))}
         </ol>
+      </div>
+
+      <div className="mt-20 border-t w-full md:max-w-6xl">
+        <div className="py-2 text-center md:py-5 md:text-left">
+          <p className="text-sm font-semibold">
+            Made with ❤️ by{" "}
+            <span
+              className={`${dancingScript.className} text-mint-500 text-xl ml-1`}
+            >
+              prasath
+            </span>
+          </p>
+        </div>
       </div>
     </MaxWidthWrapper>
   );

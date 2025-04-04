@@ -2,6 +2,7 @@ import Image from "next/image";
 import MaxWidthWrapper from "./max-width-wrapper";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
+import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/components";
 
 const Navbar = () => {
   return (
@@ -27,9 +28,9 @@ const Navbar = () => {
             About
           </Link>
 
-          <Link href={"/"} className={buttonVariants({ variant: "ghost" })}>
+          <LoginLink className={buttonVariants({ variant: "ghost" })}>
             Sign in
-          </Link>
+          </LoginLink>
         </div>
       </MaxWidthWrapper>
     </nav>
