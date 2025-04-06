@@ -7,5 +7,5 @@ export default async function Page() {
 
   if (!user || !user.id) redirect("/auth-callback?origin=dashboard");
 
-  return <div>{user.email}</div>;
+  return <div>{user.email} this </div>;
 }
