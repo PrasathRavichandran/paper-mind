@@ -26,15 +26,17 @@ export default function Home() {
   ];
   return (
     <MaxWidthWrapper
-      className={"flex flex-col items-center justify-center overflow-hidden"}
+      className={
+        "flex flex-col items-center justify-center overflow-hidden max-w-7xl"
+      }
     >
       <div className="flex items-center justify-center h-screen">
-        <div className="max-w-lg text-center md:text-left">
-          <h1 className={"font-bold text-5xl md:text-6xl"}>
+        <div className="text-center md:text-left">
+          <h1 className={"font-bold text-5xl md:text-6xl max-w-2xl"}>
             Chat with your <span className={"text-mint-500"}>documents</span> in
             a seconds.
           </h1>
-          <p className={"text-zinc-600 mt-5 ml-1"}>
+          <p className={"text-zinc-600 mt-5 ml-1 max-w-lg"}>
             Unlock the power of your PDFs with PaperMind. Interact with your
             documents using AI-driven conversations to extract insights,
             summaries, and more.
@@ -60,7 +62,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="md:my-20 md:max-w-6xl">
+      <div className="my-20">
         <div className="text-center">
           <h1 className={"font-bold text-4xl"}>Start chatting in a minutes</h1>
           <p className={"text-zinc-600 mt-2"}>
@@ -83,8 +85,8 @@ export default function Home() {
         </ol>
       </div>
 
-      <div className="mt-20 border-t w-full md:max-w-6xl">
-        <div className="py-2 text-center md:py-5 md:text-left">
+      <div className="mt-30 w-full md:max-w-6xl">
+        <div className="py-2 text-center md:py-5">
           <p className="text-sm font-semibold">
             Made with ❤️ by{" "}
             <span
